@@ -1,37 +1,28 @@
-# Kirby Demo Manager
+<img src="http://getkirby.com/assets/images/github/demokit.jpg" width="300">
 
-The Kirby Demo Manager powers the Kirby demo at <https://trykirby.com>.
 
-## Installation and usage
+**Kirby: the CMS that adapts to any project, loved by developers and editors alike.**  
+This demo site is used for the Kirby demo at [trykirby.com](https://trykirby.com).
 
-1. Create a template repo. The contents of that repository will be set up for each demo user. You can customize the demo build with a `.hooks.php` file at the root of your template repo. Our own template repo is the [Kirby Demokit](https://github.com/getkirby/demokit).
-2. Clone the `demo-manager` repository to a directory that can be accessed by your webserver.
-3. Install the Composer dependencies with `composer install`.
-4. Create an empty `data` directory inside the `demo-manager` and create a `config.php` file within it. You can find all configuration options in the [source code](src/Demo/Config.php). The bare minimum are the following options:
+<img src="http://getkirby.com/assets/images/github/demokit-screen.png" />
 
-```php
-<?php
+### Try Kirby for free  
+You can try Kirby on your local machine or on a test server as long as you need to make sure it is the right tool for your next project. … and when you’re convinced, [buy your license](https://getkirby.com/buy).
 
-return [
-    'indexResponse'  => 'https://example.com/try',
-    'statusResponse' => 'https://example.com/try/{{ type }}:{{ status }}',
-    'templateUrl'    => 'https://github.com/ghost/example-repo/archive/main.zip#example-repo-main',
-    'webhookOrigins' => ['ghost/example-repo#refs/heads/main'],
-    'webhookSecret'  => '...',
-];
-```
+It's not recommended to use this Demokit "as is" in production. Please, follow our documentation closely for more features and guides on how to build secure, high-quality websites with Kirby.
 
-5. Point your webserver at the `public` directory inside this repository.
-6. Set up the following cronjobs:
-   - `bin/demo_cleanup` (recommendation: every 10 minutes)
-   - `bin/demo_prepare` (recommendation: every minute, only in production)
-   - `bin/demo_stats --csv >> /your/path/to/stats.csv` (optional at a custom interval)
-7. If your template repo is hosted on GitHub, you can automate the template build by creating a `push` webhook to the URL `https://example.com/build` with the secret you have configured in the configuration above. Otherwise you can manually build the template with the `bin/demo_build` command.
+## What's Kirby?
+- **[getkirby.com](https://getkirby.com)** – Get to know the CMS.
+- **[Try it](https://getkirby.com/try)** – Take a test ride with our online demo. Or download one of our kits to get started.
+- **[Documentation](https://getkirby.com/docs/guide)** – Read the official guide, reference and cookbook recipes.
+- **[Issues](https://github.com/getkirby/kirby/issues)** – Report bugs and other problems.
+- **[Feedback](https://feedback.getkirby.com)** – You have an idea for Kirby? Share it.
+- **[Forum](https://forum.getkirby.com)** – Whenever you get stuck, don't hesitate to reach out for questions and support.
+- **[Discord](https://chat.getkirby.com)** – Hang out and meet the community.
+- **[Mastodon](https://mastodon.social/@getkirby)** – Spread the word.
+- **[Instagram](https://www.instagram.com/getkirby/)** – Share your creations: #madewithkirby.
 
-## License
+---
 
-<http://www.opensource.org/licenses/mit-license.php>
-
-## Author
-
-Lukas Bestle <https://getkirby.com>
+© 2009-2022 Bastian Allgeier  
+[getkirby.com](https://getkirby.com) · [License agreement](https://getkirby.com/license)

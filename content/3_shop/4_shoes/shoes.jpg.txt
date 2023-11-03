@@ -1,0 +1,9 @@
+Sort: 1
+
+----
+
+Template: shop-product-cover
+
+----
+
+Uuid: lCMcZWQC3JrztnYz
